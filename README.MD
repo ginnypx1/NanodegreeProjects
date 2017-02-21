@@ -1,0 +1,1 @@
+Silly Song is an iPhone/iPad app that generates a silly song using the user's name.
