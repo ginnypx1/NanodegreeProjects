@@ -1,0 +1,20 @@
+PROJECT REVIEW:
+
+Meets Specifications:
+
+Core Methods 2/2
+User Interface 6/6
+Actions and Methods 5/5
+
+Comments:
+
+ViewController.swift:
+Suggestion: can delete didReceiveMemoryWarning: you haven't added any custom code here, so you can remove this method.
+func textFieldShouldReturn -- Awesome!
+func displayLyrics -- Awesome! Great job using optional binding syntax here. Suggestion: you could change the if let to a guard statement.
+
+SongData.swift
+func shortNameFromName -- Awesome. Nice work!
+func lyricsForName -- Awesome. This function works great! 
+
+**I've implimented both suggestions in the current code.
