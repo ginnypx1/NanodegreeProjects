@@ -20,11 +20,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // textField delegate
         nameField.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: - Text Field Delegates
     
@@ -44,10 +39,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func displayLyrics(_ sender: Any) {
         // takes the name entered in the name field, generate the personalized lyrics, and display the lyrics in the lyrics view
         
-        if let name = nameField.text, !name.isEmpty {
-            let lyrics = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: name)
-            lyricsView.text = lyrics
+        guard let name = nameField.text, !name.isEmpty else {
+            return
         }
+        
+        lyricsView.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: name)
     }
 }
 
